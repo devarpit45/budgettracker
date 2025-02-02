@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/style.css" rel="stylesheet"/>   
+</head>
+<body>
+    <h2 align="center">update your expense</h2>
+    <form method="post" action="/budget/editexp">
+        <input type="hidden" name="id" value="<%= updatedata.id %>"/>
+        <table align="center">
+                <tr>
+                   
+                    <td><input type="text" name="title" placeholder="expense title" value="<%= updatedata.title%>"/></td>
+                    <td><input type="number" name="price" placeholder="expense price" value="<%= updatedata.price%>"/></td>
+                    <td><input type="submit" name="submit" value="update expense"/></td>
+                </tr>
+        </table>
+  </form>
+
+</body>
+</html>
